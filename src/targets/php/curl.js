@@ -70,6 +70,14 @@ module.exports = function (source, options) {
     escape: true,
     name: 'CURLOPT_POSTFIELDS',
     value: source.postData ? source.postData.text : undefined
+  }, {
+    escape: true,
+    name: 'CURLOPT_SSL_VERIFYHOST',
+    value: 0
+  }, {
+    escape: true,
+    name: 'CURLOPT_SSL_VERIFYPEER',
+    value: 0
   }]
 
   code.push('curl_setopt_array($curl, array(')
